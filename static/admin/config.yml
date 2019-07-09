@@ -16,4 +16,8 @@ collections:
       - {label: "Fecha de Publicación", name: "date", widget: "datetime"}
       - {label: "Imagen Destacada", name: "thumbnail", widget: "image"}
       - {label: "Contenido", name: "body", widget: "markdown"}
-
+  - name: "Config" # Used in routes, e.g., /admin/collections/blog
+    label: "Configuración" # Used in the UI
+    file: "config.toml" # The path to the folder where the documents are stored
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titulo", name: "title", widget: "string"}
