@@ -18,6 +18,9 @@ collections:
       - {label: "Contenido", name: "body", widget: "markdown"}
   - name: "Config" # Used in routes, e.g., /admin/collections/blog
     label: "Configuración" # Used in the UI
-    files: "config.toml" # The path to the folder where the documents are stored
-    fields: # The fields for each document, usually in front matter
-      - {label: "Titulo", name: "title", widget: "string"}
+    files:
+      - name: "Config"
+        label: "Configuración"
+        file: "config.toml"    
+        fields: # The fields for each document, usually in front matter
+          - {label: "Titulo", name: "title", widget: "string"}
