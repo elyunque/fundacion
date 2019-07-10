@@ -1,4 +1,13 @@
+{{ range where .Site.Pages "Section" "hero" }}
+        {{ if isset .Params "title" }}
+            {{ .Params.thumbnail }}
+        {{ end }}
+    {{ end }}
+
 <div class="owl-carousel slide-one-item">
-    <a href="#"><img src="images/hero_1.jpg" alt="Image" class="img-fluid"></a>
-    <a href="#"><img src="images/hero_2.jpg" alt="Image" class="img-fluid"></a>
+    {{ range where .Site.Pages "Section" "hero" }}
+        {{ if isset .Params "title" }}
+            <a href="#"><img src="{{ .Params.thumbnail }}" alt="Image" class="img-fluid"></a>
+        {{ end }}
+    {{ end }}
 </div>
