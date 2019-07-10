@@ -16,26 +16,10 @@
     </div>
    
     {{ partial "header" . }} 
+
+    {{ partial "carousel" . }}
     
-    <div class="owl-carousel slide-one-item">
-      <a href="#"><img src="images/hero_1.jpg" alt="Image" class="img-fluid"></a>
-      <a href="#"><img src="images/hero_2.jpg" alt="Image" class="img-fluid"></a>
-    </div>
-    
-    <div class="d-block d-md-flex intro-engage">
-      <div class="">
-        <h2>Rescue An Orphan</h2>
-        <p>Accusantium dignissimos voluptas rem consequatur blanditiis error ratione illo sit quasi ut praesentium magnam</p>
-      </div>
-      <div>
-        <h2>Feed The Hungry</h2>
-        <p>Accusantium dignissimos voluptas rem consequatur blanditiis error ratione illo sit quasi ut praesentium magnam</p>
-      </div>
-      <div>
-        <h2>Free Education</h2>
-        <p>Accusantium dignissimos voluptas rem consequatur blanditiis error ratione illo sit quasi ut praesentium magnam</p>
-      </div>
-    </div>
+    {{ partial "intro" . }}
 
     <div class="site-section bg-image overlay counter" style="background-image: url('images/hero_1_no-text.jpg');" id="about-section">
       <div class="container">
@@ -335,8 +319,6 @@
 
       </div>
     </div>
-
-    
 
 
     <div class="site-section" id="blog-section">

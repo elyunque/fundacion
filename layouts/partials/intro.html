@@ -1,0 +1,10 @@
+<div class="d-block d-md-flex intro-engage">
+    {{ range where .Site.Pages "Section" "hero" }}
+        {{ if isset .Params "title" }}
+            <div class="">
+                <h2>{{ .Params.title }}</h2>
+                <p>{{ .Content }}</p>
+            </div>
+        {{ end }}
+    {{ end }}
+</div>

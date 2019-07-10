@@ -5,6 +5,14 @@ backend:
 media_folder: "static/uploads"
 
 collections:
+  - name: "Config" # Used in routes, e.g., /admin/collections/blog
+    label: "Configuración" # Used in the UI
+    files:
+      - name: "Config"
+        label: "Configuración"
+        file: "config.toml"    
+        fields: # The fields for each document, usually in front matter
+          - {label: "Titulo", name: "title", widget: "string"}
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "content/blog" # The path to the folder where the documents are stored
@@ -16,11 +24,13 @@ collections:
       - {label: "Fecha de Publicación", name: "date", widget: "datetime"}
       - {label: "Imagen Destacada", name: "thumbnail", widget: "image"}
       - {label: "Contenido", name: "body", widget: "markdown"}
-  - name: "Config" # Used in routes, e.g., /admin/collections/blog
-    label: "Configuración" # Used in the UI
-    files:
-      - name: "Config"
-        label: "Configuración"
-        file: "config.toml"    
-        fields: # The fields for each document, usually in front matter
-          - {label: "Titulo", name: "title", widget: "string"}
+  - name: "hero" # Used in routes, e.g., /admin/collections/blog
+    label: "Imágenes Heroe" # Used in the UI
+    folder: "content/hero" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "hero"}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Fecha de Publicación", name: "date", widget: "datetime"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
