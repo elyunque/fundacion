@@ -1,9 +1,3 @@
-{{ range where .Site.Pages "Section" "hero" }}
-        {{ if isset .Params "title" }}
-            {{ .Params.thumbnail }}
-        {{ end }}
-    {{ end }}
-
 <div class="owl-carousel slide-one-item">
     {{ range where .Site.Pages "Section" "hero" }}
         {{ if isset .Params "title" }}
